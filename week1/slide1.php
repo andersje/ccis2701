@@ -12,7 +12,7 @@
 <ul class="lectureslide">
 <li>Introductions</li>
 <li>Course Format</li>
-<li><a href="../syllabus.html">Syllabus</a>
+<li><a href="../index.html">Syllabus</a>
 </li>
 <li>Regarding the book</li>
 <li>Tools for this course</li>
