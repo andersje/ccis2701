@@ -1,0 +1,127 @@
+RESULT DATA:
+
+NUMBER 1:
+
++------------+-------------+------+----------------------+-----------------+----------+
+| make       | model       | year | color                | production_year | quantity |
++------------+-------------+------+----------------------+-----------------+----------+
+| Chevrolet  | Belair      | 1957 | red                  |            2003 |       24 |
+| Chevrolet  | Belair      | 1958 | red                  |            2001 |       24 |
+| Chevrolet  | Belair      | 1957 | blue                 |            2003 |        4 |
+| Chevrolet  | Belair      | 1957 | yellow               |            2003 |       17 |
+| Chevrolet  | Belair      | 1957 | black/silver         |            2004 |        8 |
+| Ford       | Galaxie 500 | 1963 | red                  |            1999 |       48 |
+| Ford       | Galaxie 500 | 1963 | black                |            1999 |       24 |
+| Ford       | Galaxie 500 | 1963 | blue                 |            1999 |      148 |
+| Ford       | Galaxie 500 | 1963 | aqua                 |            1999 |       18 |
+| Ford       | Galaxie 500 | 1963 | silver               |            1999 |        4 |
+| Ford       | Galaxie 500 | 1963 | white                |            1999 |        1 |
+| Studebaker | Hawk        | 1962 | silver               |            2004 |        6 |
+| Studebaker | Hawk        | 1962 | green                |            2004 |        6 |
+| Jaguar     | XKE         | 1964 | british racing green |            2006 |      160 |
+| Pontiac    | GTO Judge   | 1969 | red/white            |            1997 |        2 |
+| Jaguar     | XKE         | 1966 | pearl white          |            2006 |       16 |
++------------+-------------+------+----------------------+-----------------+----------+
+16 rows in set (0.00 sec)
+
+
+NUMBER 4:
+
++--------+----------+---------------------+----------+
+| car_id | quantity | orderdate           | received |
++--------+----------+---------------------+----------+
+|      1 |       48 | 2006-07-22 11:05:00 |        0 |
+|      2 |       48 | 2006-07-22 11:05:00 |        0 |
+|     14 |       24 | 2006-07-22 14:40:00 |        0 |
+|     17 |      144 | 2006-07-22 16:10:00 |        0 |
++--------+----------+---------------------+----------+
+4 rows in set (0.00 sec)
+
+NUMBER 5:
+
++-----------+--------+----------------------+-----------------+------+----------+---------------------+
+| make      | model  | color                | production_year | year | quantity | orderdate           |
++-----------+--------+----------------------+-----------------+------+----------+---------------------+
+| Chevrolet | Belair | red                  |            2003 | 1957 |       48 | 2006-07-22 11:05:00 |
+| Chevrolet | Belair | red                  |            2001 | 1958 |       48 | 2006-07-22 11:05:00 |
+| Jaguar    | XKE    | british racing green |            2006 | 1964 |       24 | 2006-07-22 14:40:00 |
+| Jaguar    | XKE    | pearl white          |            2006 | 1966 |      144 | 2006-07-22 16:10:00 |
++-----------+--------+----------------------+-----------------+------+----------+---------------------+
+4 rows in set (0.00 sec)
+
+NUMBER 6:
+
+mysql> select * from on_order;
++-----------+--------+----------------------+-----------------+------+----------+---------------------+
+| make      | model  | color                | production_year | year | quantity | orderdate           |
++-----------+--------+----------------------+-----------------+------+----------+---------------------+
+| Chevrolet | Belair | red                  |            2003 | 1957 |       48 | 2006-07-22 11:05:00 |
+| Chevrolet | Belair | red                  |            2001 | 1958 |       48 | 2006-07-22 11:05:00 |
+| Jaguar    | XKE    | british racing green |            2006 | 1964 |       24 | 2006-07-22 14:40:00 |
+| Jaguar    | XKE    | pearl white          |            2006 | 1966 |      144 | 2006-07-22 16:10:00 |
++-----------+--------+----------------------+-----------------+------+----------+---------------------+
+4 rows in set (0.00 sec)
+
+
+NUMBER 7:
+
+mysql> select * from car_with_manuf;
++----------------------+------------+-------------+----------------------+----------+-----------------+------------+
+| name                 | make       | model       | color                | quantity | production_year | scale_code |
++----------------------+------------+-------------+----------------------+----------+-----------------+------------+
+| Ertl                 | Chevrolet  | Belair      | red                  |       24 |            2003 |          1 |
+| Ertl                 | Chevrolet  | Belair      | red                  |       24 |            2001 |          1 |
+| Ertl                 | Chevrolet  | Belair      | blue                 |        4 |            2003 |          1 |
+| Ertl                 | Chevrolet  | Belair      | yellow               |       17 |            2003 |          1 |
+| Ertl                 | Chevrolet  | Belair      | black/silver         |        8 |            2004 |          1 |
+| Ertl                 | Ford       | Galaxie 500 | red                  |       48 |            1999 |          1 |
+| Ertl                 | Ford       | Galaxie 500 | black                |       24 |            1999 |          1 |
+| Ertl                 | Ford       | Galaxie 500 | blue                 |      148 |            1999 |          1 |
+| Ertl                 | Ford       | Galaxie 500 | aqua                 |       18 |            1999 |          1 |
+| Ertl                 | Ford       | Galaxie 500 | silver               |        4 |            1999 |          1 |
+| Ertl                 | Ford       | Galaxie 500 | white                |        1 |            1999 |          1 |
+| Maisto               | Studebaker | Hawk        | silver               |        6 |            2004 |          3 |
+| Maisto               | Studebaker | Hawk        | green                |        6 |            2004 |          2 |
+| Yat Ming Company     | Jaguar     | XKE         | british racing green |      160 |            2006 |          4 |
+| Precision Miniatures | Pontiac    | GTO Judge   | red/white            |        2 |            1997 |          1 |
+| Precision Miniatures | Pontiac    | GTO Judge   | green/white          |        0 |            1997 |          1 |
+| Yat Ming Company     | Jaguar     | XKE         | pearl white          |       16 |            2006 |          4 |
++----------------------+------------+-------------+----------------------+----------+-----------------+------------+
+17 rows in set (0.00 sec)
+
+NUMBER 8:
+
+mysql> select * from diecast_car_with_scale;
++----------------------+------------+-------------+----------------------+----------+-----------------+------------+-------------+
+| name                 | make       | model       | color                | quantity | production_year | model_year | description |
++----------------------+------------+-------------+----------------------+----------+-----------------+------------+-------------+
+| Ertl                 | Chevrolet  | Belair      | red                  |       24 |            2003 |       1957 | 1/18        |
+| Ertl                 | Chevrolet  | Belair      | blue                 |        4 |            2003 |       1957 | 1/18        |
+| Ertl                 | Chevrolet  | Belair      | black/silver         |        8 |            2004 |       1957 | 1/18        |
+| Ertl                 | Chevrolet  | Belair      | yellow               |       17 |            2003 |       1957 | 1/18        |
+| Ertl                 | Chevrolet  | Belair      | red                  |       24 |            2001 |       1958 | 1/18        |
+| Maisto               | Studebaker | Hawk        | green                |        6 |            2004 |       1962 | 1/24        |
+| Maisto               | Studebaker | Hawk        | silver               |        6 |            2004 |       1962 | 1/43        |
+| Ertl                 | Ford       | Galaxie 500 | aqua                 |       18 |            1999 |       1963 | 1/18        |
+| Ertl                 | Ford       | Galaxie 500 | red                  |       48 |            1999 |       1963 | 1/18        |
+| Ertl                 | Ford       | Galaxie 500 | white                |        1 |            1999 |       1963 | 1/18        |
+| Ertl                 | Ford       | Galaxie 500 | blue                 |      148 |            1999 |       1963 | 1/18        |
+| Ertl                 | Ford       | Galaxie 500 | silver               |        4 |            1999 |       1963 | 1/18        |
+| Ertl                 | Ford       | Galaxie 500 | black                |       24 |            1999 |       1963 | 1/18        |
+| Yat Ming Company     | Jaguar     | XKE         | british racing green |      160 |            2006 |       1964 | 1/64        |
+| Yat Ming Company     | Jaguar     | XKE         | pearl white          |       16 |            2006 |       1966 | 1/64        |
+| Precision Miniatures | Pontiac    | GTO Judge   | red/white            |        2 |            1997 |       1969 | 1/18        |
+| Precision Miniatures | Pontiac    | GTO Judge   | green/white          |        0 |            1997 |       1969 | 1/18        |
++----------------------+------------+-------------+----------------------+----------+-----------------+------------+-------------+
+17 rows in set (0.00 sec)
+
+NUMBER 10:
+
+mysql> select * from diecast_car_43;
++--------+------------+-------+--------+----------+-----------------+------------+-------------+
+| name   | make       | model | color  | quantity | production_year | model_year | description |
++--------+------------+-------+--------+----------+-----------------+------------+-------------+
+| Maisto | Studebaker | Hawk  | silver |        6 |            2004 |       1962 | 1/43        |
++--------+------------+-------+--------+----------+-----------------+------------+-------------+
+1 row in set (0.01 sec)
+
